@@ -24,10 +24,12 @@
             android:text="Order no "
             android:textSize="15sp"/>
         <TextView
+            android:id="@+id/pStatus"
             android:layout_below="@id/pDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Status : "
+
             android:textStyle="italic"
             android:textSize="15sp"/>
 

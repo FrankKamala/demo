@@ -1,10 +1,12 @@
 package com.example.mydemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.mydemo.adp.ListAdapter;
 import com.example.mydemo.adp.adp;
 
 import java.util.ArrayList;
@@ -22,5 +24,12 @@ public class MainActivity extends AppCompatActivity {
         myList.add(new adp("Order no ","Order Date","Status" ));
         myList.add(new adp("Order no ","Order Date","Status" ));
         myList.add(new adp("Order no ","Order Date","Status" ));
+        mRecycler=findViewById(R.id.homeRecycler);
+        mRecycler.setHasFixedSize(true);
+        mManager = new LinearLayoutManager(this);
+        mAdapter = new ListAdapter(myList);
+        mRecycler.setLayoutManager(mManager);
+        mRecycler.setAdapter(mAdapter);
+
     }
 }

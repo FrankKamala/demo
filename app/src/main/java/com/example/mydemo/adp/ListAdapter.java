@@ -23,7 +23,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
             super(itemView);
             mText1=itemView.findViewById(R.id.pOrder);
             mText2=itemView.findViewById(R.id.pDate);
-            mText1=itemView.findViewById(R.id.pStatus);
+            mText3=itemView.findViewById(R.id.pStatus);
         }
     }
 

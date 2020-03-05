@@ -10,7 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mydemo.R;
 
+import java.util.ArrayList;
+
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> {
+   private ArrayList<adp> mExampleAdp;
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         public TextView mText1;
         public TextView mText2;
@@ -22,6 +25,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
             mText2=itemView.findViewById(R.id.pDate);
             mText1=itemView.findViewById(R.id.pStatus);
         }
+    }
+
+    public ListAdapter (ArrayList<adp> exampleAdp){
+        mExampleAdp= exampleAdp;
     }
 
     @NonNull

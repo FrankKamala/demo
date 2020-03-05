@@ -43,7 +43,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        adp currentItem = mExampleAdp.get(position);
+        holder.mText1.setText(currentItem.getmPurchaseOrder());
+        holder.mText1.setText(currentItem.getmDateOrder());
+        holder.mText1.setText(currentItem.getOrderStatus());
     }
 
     @Override
